@@ -27,7 +27,7 @@ public class Reservation {
 		
 	}
 
-	public Reservation(LocalDateTime date) {
+	Reservation(LocalDateTime date) {
 		super();
 		this.date = date;
 	}

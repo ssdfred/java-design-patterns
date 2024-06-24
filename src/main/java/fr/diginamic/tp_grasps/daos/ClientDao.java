@@ -8,7 +8,14 @@ import fr.diginamic.tp_grasps.beans.Client;
 public class ClientDao {
 
 	private static Client[] clients = {new Client("1", true), new Client("2", true), new Client("3", false)};
+	private static ClientDao instance; // Instance Singleton
 	
+    public static ClientDao getInstance() {
+        if (instance == null) {
+            instance = new ClientDao();
+        }
+        return instance;
+    }
 	public Client extraireClient(String id) {
 		
 		Optional<Client> opt = List.of(clients).stream().filter(c->c.getIdentifiantClient().equals(id)).findAny();
