@@ -49,7 +49,7 @@ public class ReservationController  {
 	    }
 	    
 	    // 5) Création de la réservation avec la factory
-	    Reservation reservation = ReservationFactory.getInstance(identifiantClient, dateReservationStr, typeReservationStr, nbPlaces);
+	    Reservation reservation = new Reservation();
 	    
 	    // 6) Calcul du montant total de la réservation
 	    Calcul.calculerMontantTotal(reservation, client, typeReservation, nbPlaces);

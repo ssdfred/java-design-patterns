@@ -1,50 +1,31 @@
 package fr.diginamic.factory;
 
-public class Element {
-	protected String nom;
-	protected Double valeur;
-	protected Unite unite;
-	public Element(String nom, Double valeur, Unite unite) {
-		this.nom = nom;
-		this.valeur = valeur;
-		this.unite = unite;
-	}
-	/** Getter pour nom
-	 * @return the nom 
-	*/
-	public String getNom() {
-		return nom;
-	}
-	/** Setter pour nom
-	 * @param nom
-	 */
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	/** Getter pour valeur
-	 * @return the valeur 
-	*/
-	public Double getValeur() {
-		return valeur;
-	}
-	/** Setter pour valeur
-	 * @param valeur
-	 */
-	public void setValeur(Double valeur) {
-		this.valeur = valeur;
-	}
-	/** Getter pour unite
-	 * @return the unite 
-	*/
-	public Unite getUnite() {
-		return unite;
-	}
-	/** Setter pour unite
-	 * @param unite
-	 */
-	public void setUnite(Unite unite) {
-		this.unite = unite;
-	}
+public abstract class Element {
+    private String nom;
+    private Double valeur;
+    private Unite unite;
+    private TypeElement type;
 
+    public Element(TypeElement type, String nom, Double valeur, Unite unite) {
+        this.type = type;
+        this.nom = nom;
+        this.valeur = valeur;
+        this.unite = unite;
+    }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public Double getValeur() {
+        return valeur;
+    }
+
+    public Unite getUnite() {
+        return unite;
+    }
+
+    public TypeElement getType() {
+        return type;
+    }
 }
