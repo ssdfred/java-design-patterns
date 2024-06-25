@@ -1,6 +1,7 @@
 package fr.diginamic.composite;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Service implements IElement {
@@ -8,9 +9,9 @@ public class Service implements IElement {
 	private String nom;
 	private List<IElement> elements =new ArrayList<>();
 	
-	public Service(String nom) {
+	public Service(String nom,IElement ...elements) {
 		this.nom = nom;
-		this.elements = elements;
+		Collections.addAll(this.elements, elements);
 		}
 
 	public void ajoutElements(IElement element) {

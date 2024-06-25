@@ -17,17 +17,11 @@ public class TestComposite {
 		Employe concepteur = new Employe("Jane", "MDOE", 3500.00);
 		
 		// Créer des services
-        Service service1 = new Service("DSNI");
-        Service service2 = new Service("JAVADEV");
-        Service service3 = new Service("BIGDATA");
+        Service service1 = new Service("DSNI", Architcte, Directeur);
+        Service service2 = new Service("JAVADEV", chefJAva, lead);
+        Service service3 = new Service("BIGDATA", chefJB, concepteur);
         
-        // Ajouter des employés aux services
-        service1.ajoutElements(Architcte);
-        service1.ajoutElements(Directeur);
-        service2.ajoutElements(chefJAva);
-        service2.ajoutElements(lead);
-        service3.ajoutElements(concepteur);
-        service3.ajoutElements(chefJB);
+  
         
     
      // Créer un service global et ajouter des sous-services
