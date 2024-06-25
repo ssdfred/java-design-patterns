@@ -6,6 +6,9 @@ import org.junit.Test;
 
 public class FactoryTest {
 
+	/**
+	 * 
+	 */
 	@Test
 	public void testCreateIngredient() {
 		Element element = ElementFactory.getElement(TypeElement.INGREDIENT,"Sel", 5.0, Unite.GRAMMES);
